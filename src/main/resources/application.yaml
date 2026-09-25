@@ -1,3 +1,21 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: api-auth
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nuevaeps
+    username: postgres
+    password: Rivaldo1982
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: auth
+seguridad:
+  secret-key: 7fa7e93d5162be08d1f32ac603e9ba12834a4db1f94e3effc70d3755cf61ce5e
+  expiration-time: 1800000
